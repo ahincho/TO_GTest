@@ -116,6 +116,35 @@ int main()
 TEST (size, Prueba)
 {
 	LinkedList<int> listInt;
-    listInt.append(19);
+	listInt.append(19);
 	EXPECT_EQ(1, listInt.size());
 }
+
+TEST (isEmpty, Prueba)
+{
+        LinkedList<int> listInt;
+        EXPECT_EQ(true, listInt.isEmpty());
+}
+
+TEST (isNotEmpty, Prueba)
+{
+        LinkedList<int> listInt;
+        listInt.append(19);
+	EXPECT_EQ(false, listInt.isEmpty());
+}
+
+TEST (head, Prueba)
+{
+        LinkedList<int> listInt;
+        listInt.append(19);
+        EXPECT_EQ(19, listInt.head());
+}
+
+TEST (tail, Prueba)
+{
+        LinkedList<int> listInt;
+        listInt.append(19);
+	listInt.append(21);
+        EXPECT_EQ(21, listInt.tail());
+}
+

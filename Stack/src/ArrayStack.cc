@@ -107,16 +107,38 @@ int main()
     assert(s.top() == 2);
     s.pop();
     // Una vez retiramos un elemento, verificar si esta vacia
-    assert(s.empty());
+    assert(s.empty() == true);
     // s.push(12);
     // s.push(2);
     // s.push(19);
     return 0;
 }
 
-TEST (empty, Prueba)
+TEST (isEmpty, Prueba)
 {
 	ArrayStack<int> s(10);
-	s.push(2);
-	EXPECT_EQ(false, s.empty());
+	EXPECT_EQ(true, s.empty());
 }
+
+TEST (isNotEmpty, Prueba)
+{
+        ArrayStack<int> s(10);
+        s.push(2);
+        EXPECT_EQ(false, s.empty());
+}
+
+TEST (top, Prueba)
+{
+        ArrayStack<int> s(10);
+        s.push(2);
+        EXPECT_EQ(2, s.top());
+}
+
+TEST(pop, Prueba)
+{
+        ArrayStack<int> s(10);
+        s.push(2);
+	s.pop()
+        EXPECT_EQ(true, s.empty());
+}
+
